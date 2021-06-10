@@ -27,7 +27,11 @@
 + (instancetype)tableViewBackgroundLabel {
     UILabel *label = [[UILabel alloc] init];
     label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-    label.textColor = [UIColor darkGrayColor];
+    if (@available(iOS 13.0, *)) {
+        label.textColor = [UIColor systemBackgroundColor];
+    } else {
+        label.textColor = UIColor.darkGrayColor;
+    }
     label.textAlignment = NSTextAlignmentCenter;
     label.numberOfLines = 0;
     return label;
