@@ -291,14 +291,6 @@
             </objects>
             <point key="canvasLocation" x="681" y="-202"/>
         </scene>
-        <!--DBLocationTableViewController-->
-        <scene sceneID="CNS-gn-gnl">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DBLocationTableViewController" id="hDw-87-hMk" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qaG-Pr-j4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="681" y="-45"/>
-        </scene>
         <!--DBCustomVariablesTableViewController-->
         <scene sceneID="rKG-Dd-hH9">
             <objects>

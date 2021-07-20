@@ -47,9 +47,14 @@ static NSString *const DBCustomActionsTableViewControllerButtonCellIdentifier = 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    for (DBCustomAction *act in self.customActions) { act.isActive = false; }
+    
     DBCustomAction *action = self.customActions[indexPath.row];
+    action.isActive = true;
+    
     [action perform];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -70,6 +75,7 @@ static NSString *const DBCustomActionsTableViewControllerButtonCellIdentifier = 
         cell.textLabel.textColor = cell.tintColor;
     }
     cell.textLabel.text = action.name;
+    cell.accessoryType = action.isActive ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     return cell;
 }
 

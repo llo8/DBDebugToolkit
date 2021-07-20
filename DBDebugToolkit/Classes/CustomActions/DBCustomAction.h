@@ -38,6 +38,8 @@ typedef void(^DBCustomActionBody)(void);
 /// @name Initialization
 ///---------------------
 
+@property (nonatomic, assign) BOOL isActive;
+
 /**
  Creates and returns a new `DBCustomAction` instance.
  
